@@ -1,0 +1,14 @@
+def szukac_konkretnych_imion(list_names, litery):
+
+    pusta_lista = []
+
+    #można użyć intersection z tuples
+
+    for name in list_names.keys():
+        name_list = list(name)
+        if name.startswith(litery):
+            pusta_lista.append(list_names[name])
+
+    return pusta_lista
+
+print(szukac_konkretnych_imion(list_names, "A"))
